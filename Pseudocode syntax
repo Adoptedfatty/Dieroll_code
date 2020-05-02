@@ -1,0 +1,42 @@
+//procedure doesnt return a value, function does
+//byval doesnt affect actual parameters when formal parameters change
+//byref changes actual parameters when formal parameters change
+
+
+FUNCTION StringClean(Instring STRING) RETURNS STRING    
+DECLARE NextChar : CHAR    
+DECLARE OutString : STRING    
+OutString ← ""     // initialise the return string 
+ 
+// loop through Instring to produce OutString    
+FOR n ← 1 TO LENGTH(InString)  // from first to last              
+  NextChar  ← MID(Instring, n, 1) // get next character      
+  NextChar  ← LCASE(NextChar) //convert to lowercase
+  IF NextChar >= 'a' AND NextChar <= 'z' THEN             
+       OutString ← OutString & NextChar  
+  ENDIF    
+ENDFOR 
+RETURN OutString               // return value 
+ENDFUNCTION 
+ 
+ 
+ PROCEDURE SearchFile() 
+ DECLARE FileData : STRING 
+ DECLARE MyArrayRow : INTEGER 
+ DECLARE SearchID : STRING 
+ MyArrayRow ← 0 / 1 
+ OPEN "Loginfile.txt" FOR READ 
+ INPUT SearchID 
+ 
+ WHILE NOT EOF("Loginfile.txt")    
+    READFILE "Loginfile.txt", Filedata    
+    IF SearchID = LEFT(FileData,5)       
+    THEN         
+    LoginEvents[MyArrayRow,1] ← MID(Filedata, 6, 4)         
+    LoginEvents[MyArrayRow,2] ← RIGHT(Filedata, 14)         
+    MyArrayRow ← MyArrayRow + 1    
+    ENDIF 
+ ENDWHILE
+ 
+ CLOSEFILE("LoginFile.txt") 
+ ENDPROCEDURE 
