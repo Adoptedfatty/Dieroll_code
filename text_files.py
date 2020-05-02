@@ -1,4 +1,4 @@
-
+# modes of access: "a" for append, "w" for write, "r" for read, "w+" for read/write
 # reading from/writing to text files test
 path = "C:\\Users\\Habashy\\Desktop\\AL CS S20\\Tests\\SampleFile.txt"
 
