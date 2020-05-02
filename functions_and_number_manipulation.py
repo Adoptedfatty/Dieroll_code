@@ -30,8 +30,8 @@ Sometime = Sometime + timedelta(day, 0, 0, 0, 0, hour)  # adds days and hours to
 
 # rounding numbers
 round(2.554, 0)  # rounds the number 2.554 after 0 decimal places (result is 3)
-round(2.554, 0)  # rounds the number 2.554 after 1 decimal places (result is 2.6)
-round(2.554, 0)  # rounds the number 2.554 after 2 decimal points (result is 2.55)
+round(2.554, 1)  # rounds the number 2.554 after 1 decimal places (result is 2.6)
+round(2.554, 2)  # rounds the number 2.554 after 2 decimal points (result is 2.55)
 
 # truncating numbers
 int(2.554)  # removes any numbers after the decimal point (result is 2)
