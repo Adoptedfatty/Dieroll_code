@@ -40,3 +40,12 @@ ENDFUNCTION
  
  CLOSEFILE("LoginFile.txt") 
  ENDPROCEDURE 
+
+
+// composite datatypes
+TYPE StudentAssessment   
+DECLARE Code   : STRING   
+DECLARE Mark   : ARRAY[1:6] OF INTEGER   
+DECLARE AverageMark : REAL 
+ENDTYPE 
+
