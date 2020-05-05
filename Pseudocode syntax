@@ -43,9 +43,13 @@ ENDFUNCTION
 
 
 // composite datatypes
-TYPE StudentAssessment   
+
+TYPE StudentAssessment  // Record   
 DECLARE Code   : STRING   
 DECLARE Mark   : ARRAY[1:6] OF INTEGER   
 DECLARE AverageMark : REAL 
 ENDTYPE 
 
+TYPE  // Enumerated
+ DECLARE Months: (Jan, Feb, Mar, Apr, May, Jun)
+ENDTYPE
