@@ -55,4 +55,16 @@ def randommain():
     CarFile.seek(Address)
     ThisCar = pickle.load(CarFile)  # Loads record from file
 
-    CarFile.close()
+    CarFile.close
+    
+    
+    # Pseudocode
+    OPENFILE <filename> FOR RANDOM/READ/WRITE/APPEND
+    FILEWRITE <filename>, <var1>, <var2>
+    FILEREAD <filename>, <var1>, <var2>
+    SEEK <filename>, <address>
+    PUTRECORD <filename>, <identifier> 
+    GETRECORD <filename>, <identifier>
+    EOF <filename>
+    EXISTS <filename>
+    CLOSEFILE <filename>
